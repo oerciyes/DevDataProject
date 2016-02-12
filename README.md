@@ -20,3 +20,6 @@ The app is published at this address:
 https://oerciyes.shinyapps.io/ExpectedTimeCalculator/
 
 This is a very simple app. In order to calculate the expected time for a business task, just enter the optimistic (shortest), pessimistic (longest), and the realistic time that you would expect the task to take. The app will calculate the expected time for the task, using the appropriate formula. 
+
+Here you can find a presentation that provides more detailed information regarding the app and the business term Expected Time.
+RPUBS LINKINI DE KOYMAYI UNUTMA
