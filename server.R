@@ -7,56 +7,34 @@ shinyServer(function(input, output) {
   
   observe({
     input$Calculate
-    values$bmi <- isolate({
-      input$num_weight/(input$num_height * input$num_height * 0.0001)
+    values$expected <- isolate({
+      (input$optimistic+input$pessimistic+input$likely*4)/6
       
     })
   })
-  
-#   if values$bmi < 18.5 
-#   {
-#     values$status="Underweight"
-#   }
-#   else if values$bmi < 24.9
-#   {
-#     values$status="Normal weight"
-#   }
-#   else if values$bmi < 29.9
-#   {
-#     values$status="Overweight"
-#   }
-#   else
-#   {
-#     values$status="Obesity"
-#   }  
 
-  # Display values entered
-  output$text_height <- renderText({
+
+
+# Display values entered
+  output$optimistic <- renderText({
     input$Calculate
-    paste("Height [CM] :", isolate(input$num_height))
+    paste("Your optimistic time estimate [in hours] :", isolate(input$optimistic))
   })
   
-  output$text_weight <- renderText({
+  output$pesimistic <- renderText({
     input$Calculate
-    paste("Weight [KG} : ", isolate(input$num_weight))
+    paste("Your pessimistic time estimate [in hours] : ", isolate(input$pessimistic))
   })
   
-  
-    
-  # Display calculated values
-  
-  output$text_BMI <- renderText({
+  output$likely <- renderText({
+    input$Calculate
+    paste("Your likely time estimate [in hours] : ", isolate(input$likely))
+  })
+
+  output$text_expected <- renderText({
     if(input$Calculate == 0) ""
-    else
+    Else
       
-      paste("BMI is (Metric):", values$bmi)
+      paste("Expected Time is:", values$expected)
   })
-  
-#   output$text_status <- renderText({
-#     if(input$Calculate == 0) ""
-#     else
-#       
-#       paste("BMI shows you are ", values$status)
-#   })
-  
-})
+
