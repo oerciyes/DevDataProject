@@ -8,7 +8,8 @@ This repository contains the files and the documentation for the Expected Time C
 - server.R
 
 
-ABOUT THE EXPECTED TIME CALCULATION TECHNIQUE (a.k.a the PERT Technique)
+ABOUT THE EXPECTED TIME CALCULATION TECHNIQUE 
+(a.k.a the PERT Technique)
 ------------------
 PERT (program evaluation review technique) is a technique that uses optimistic, pessimistic, and realistic time estimates to calculate the expected time for a particular task. This technique helps you obtain a better time estimate when you are uncertain as to how much time a task will require to be completed.
 
