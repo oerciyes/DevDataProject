@@ -30,7 +30,7 @@ p = pessimistic completion time for an activity
 
 ABOUT THE APP
 ------------------
-The app is published at this address:
+The Expected Time Calculator app is published at this address:
 
 https://oerciyes.shinyapps.io/ExpectedTimeCalculator/
 
