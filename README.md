@@ -38,4 +38,4 @@ This is a very simple app. In order to calculate the expected time for a busines
 
 Here you can find a presentation that provides more detailed information regarding the app and the business term Expected Time:
 
-RPUBS LINKINI DE KOYMAYI UNUTMA
+http://rpubs.com/oerciyes/152487
