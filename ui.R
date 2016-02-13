@@ -3,7 +3,7 @@ library(shiny)
 shinyUI(
   pageWithSidebar(
     # Application title
-    headerPanel("EXPECTED TIME CALCULATOR (Systems Development Tool)"),
+    headerPanel("EXPECTED TIME CALCULATOR (the PERT technique)"),
     
     sidebarPanel(
       numericInput('optimistic', 'Insert your optimistic time estimate (h)', 0, min = 1, max = 300, step = 1) ,
@@ -13,7 +13,7 @@ shinyUI(
     ), 
     mainPanel(
       h4('DOCUMENTATION:'),
-      p('In order to calculate the expected time for a business task within the Systems Development Life Cycle, just enter the optimistic (shortest), pessimistic (longest), and the realistic time that you would expect the task to take. The app will calculate the expected time for the task, using the appropriate formula.'),
+      p('In order to calculate the expected time for a particular task to be completed, just enter the optimistic (shortest), pessimistic (longest), and the realistic time that you would expect the task to take. The app will calculate the expected time for the task, using the appropriate formula.'),
       
       
       
@@ -23,7 +23,13 @@ shinyUI(
       p('likely:'), verbatimTextOutput("inputlikelyvalue"),
       h4('The expected time is:'),
       verbatimTextOutput("estimation"),
-      p('THE EXPECTED TIME FOR THE COMPLETION OF A BUSINESS TASK IS CALCULATED ABOVE'),strong(verbatimTextOutput("diagnostic"))
+      p('NOTE: It is also possible to do this calculation with the following formula: 
+        ET = (o + 4r + p)/6'),
+      p('where'),
+      p('ET = expected time for the completion for an activity'),
+      p('o = optimistic completion time for an activity'),
+      p('r = realistic completion time for an activity'),
+      p('p = pessimistic completion time for an activity'),strong(verbatimTextOutput("diagnostic"))
       
       
       
