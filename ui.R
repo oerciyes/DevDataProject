@@ -27,9 +27,9 @@ shinyUI(
         ET = (o + 4r + p)/6'),
       p('where'),
       p('ET = expected time for the completion for an activity'),
-      p('o = optimistic completion time for an activity'),
-      p('r = realistic completion time for an activity'),
-      p('p = pessimistic completion time for an activity'),strong(verbatimTextOutput("diagnostic"))
+      p('o = optimistic completion time estimate for an activity'),
+      p('r = realistic completion time estimate for an activity'),
+      p('p = pessimistic completion time estimate for an activity'),strong(verbatimTextOutput("PERT"))
       
       
       
