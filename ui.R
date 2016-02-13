@@ -1,3 +1,4 @@
+
 library(shiny) 
 shinyUI(
   pageWithSidebar(
@@ -11,6 +12,10 @@ shinyUI(
       submitButton('Submit')
     ), 
     mainPanel(
+      h4('DOCUMENTATION:'),
+      p('In order to calculate the expected time for a business task within the Systems Development Life Cycle, just enter the optimistic (shortest), pessimistic (longest), and the realistic time that you would expect the task to take. The app will calculate the expected time for the task, using the appropriate formula.'),
+      
+      
       
       h4('You have entered the following values:'), 
       p('optimistic:'), verbatimTextOutput("inputoptimisticvalue"),
@@ -18,7 +23,7 @@ shinyUI(
       p('likely:'), verbatimTextOutput("inputlikelyvalue"),
       h4('The expected time is:'),
       verbatimTextOutput("estimation"),
-      p('EXPECTED TIME IS CALCULATED ABOVE'),strong(verbatimTextOutput("diagnostic"))
+      p('THE EXPECTED TIME FOR THE COMPLETION OF A BUSINESS TASK IS CALCULATED ABOVE'),strong(verbatimTextOutput("diagnostic"))
       
       
       
